@@ -1,0 +1,19 @@
+package com.printo.project.interfaces;
+
+import java.util.List;
+
+import com.printo.project.entities.Admin;
+import com.printo.project.entities.Client;
+
+public interface ClientServiceInterface {
+
+	public List<Client> getAllDataClient();
+	// delete client
+	public int deletenewClientToDB(Client data); 
+	// add new client to db
+	public int addnewClientToDB(Client data); 
+	// validate client by id
+	public Client getClientValid(String id); 
+	// validate client by pojo class
+	public Client validateClient(Client uu); 
+}

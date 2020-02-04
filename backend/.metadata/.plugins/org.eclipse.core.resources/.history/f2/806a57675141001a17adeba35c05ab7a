@@ -1,0 +1,50 @@
+package com.printo.project.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.printo.project.database.ClientDB;
+import com.printo.project.entities.Admin;
+import com.printo.project.entities.Client;
+
+@Service
+public class ClientService {
+
+	@Autowired
+	private ClientDB clientDB;
+	
+	
+	public List<Client> getAllDataClient() {
+		List<Client> data=clientDB.findAll();
+		return data;
+	}
+	
+	// delete client
+	public int deletenewClientToDB(Client data) {
+		int x=clientDB.deleteByIdClient(data.getId());
+		return x;
+	}	
+	// add new client to db
+	public int addnewClientToDB(Client data) {
+		System.out.println("client name "+data.getClientpcname());
+		int status=clientDB.addClientFinalToDB(data.getId(),data.getClientpcname(),data.getEmail()
+				,data.getName(),data.getPassword());
+		System.out.println("shashwat"+status);
+		return status;
+	}
+
+	public Client getClientValid(String id) {
+		return clientDB.findDataById(id);
+	}
+
+	public Client validateClient(Client uu) {
+		Client data=clientDB.findClientById(uu.getId(),uu.getPassword());
+		return data;
+	}
+
+	
+
+}

@@ -1,0 +1,18 @@
+2020-01-22 12:51:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE ADMIN (ID VARCHAR(255) NOT NULL, EMAIL VARCHAR(255), NAME VARCHAR(255), PASSWORD VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]MYISAM"; expected "identifier"; SQL statement:
+create table admin (id varchar(255) not null, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=MyISAM [42001-200]
+2020-01-22 12:51:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE CLIENT (ID VARCHAR(255) NOT NULL, CLIENTPCNAME VARCHAR(255), EMAIL VARCHAR(255), NAME VARCHAR(255), PASSWORD VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]MYISAM"; expected "identifier"; SQL statement:
+create table client (id varchar(255) not null, clientpcname varchar(255), email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=MyISAM [42001-200]
+2020-01-22 12:51:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE PRINT_DETAILS (JOBID INTEGER NOT NULL, JOBNAME VARCHAR(255), PRINTERNAME VARCHAR(255), SHEET INTEGER, USERNAME VARCHAR(255), PRIMARY KEY (JOBID)) ENGINE=[*]MYISAM"; expected "identifier"; SQL statement:
+create table print_details (jobid integer not null, jobname varchar(255), printername varchar(255), sheet integer, username varchar(255), primary key (jobid)) engine=MyISAM [42001-200]
+2020-01-22 12:51:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE TABLELINECOUNT (IDOFSTATUS INTEGER NOT NULL, STATUS BIGINT, PRIMARY KEY (IDOFSTATUS)) ENGINE=[*]MYISAM"; expected "identifier"; SQL statement:
+create table tablelinecount (idofstatus integer not null, status bigint, primary key (idofstatus)) engine=MyISAM [42001-200]
+2020-01-22 12:51:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TABLELINECOUNT" not found; SQL statement:
+select count(*) as col_0_0_ from tablelinecount tablelinec0_ [42102-200]
+2020-01-22 12:51:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRINT_DETAILS" not found; SQL statement:
+select printdetai0_.jobid as jobid1_2_, printdetai0_.jobname as jobname2_2_, printdetai0_.printername as printern3_2_, printdetai0_.sheet as sheet4_2_, printdetai0_.username as username5_2_ from print_details printdetai0_ [42102-200]

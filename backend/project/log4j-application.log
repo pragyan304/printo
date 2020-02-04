@@ -1,0 +1,656 @@
+2020-01-28 22:58:29 ERROR Entry:44 - constructor is called
+2020-01-28 23:43:47 INFO  Entry:181 - count admin table entry
+2020-01-28 23:43:47 INFO  Entry:138 - add new admin
+2020-01-28 23:44:03 INFO  Entry:82 - verify admin
+2020-01-28 23:44:03 INFO  Entry:214 - Authorize admin for home page after admin login
+2020-01-28 23:44:10 INFO  Entry:58 - log is readed succesfully
+2020-01-28 23:44:12 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-28 23:44:23 INFO  Entry:99 - report downloaded succesfully
+2020-01-28 23:44:44 INFO  Entry:172 - get all admin
+2020-01-28 23:44:46 INFO  Entry:164 - get all client
+2020-01-28 23:46:32 INFO  Entry:181 - count admin table entry
+2020-01-28 23:46:35 INFO  Entry:82 - verify admin
+2020-01-28 23:46:36 INFO  Entry:214 - Authorize admin for home page after admin login
+2020-01-28 23:48:54 INFO  Entry:110 - new client added succesfully
+2020-01-28 23:49:15 ERROR Entry:113 - error in inserting new client
+2020-01-28 23:49:38 ERROR Entry:113 - error in inserting new client
+2020-01-28 23:50:32 INFO  Entry:110 - new client added succesfully
+2020-01-28 23:50:39 INFO  Entry:110 - new client added succesfully
+2020-01-28 23:54:24 INFO  Entry:110 - new client added succesfully
+2020-01-28 23:54:26 INFO  Entry:164 - get all client
+2020-01-28 23:54:29 INFO  Entry:164 - get all client
+2020-01-28 23:54:29 INFO  Entry:124 - delete client
+2020-01-28 23:54:31 INFO  Entry:124 - delete client
+2020-01-28 23:54:31 INFO  Entry:164 - get all client
+2020-01-28 23:54:33 INFO  Entry:124 - delete client
+2020-01-28 23:54:33 INFO  Entry:164 - get all client
+2020-01-28 23:54:34 INFO  Entry:124 - delete client
+2020-01-28 23:54:34 INFO  Entry:164 - get all client
+2020-01-28 23:54:38 INFO  Entry:164 - get all client
+2020-01-28 23:54:53 INFO  Entry:90 - verify client
+2020-01-28 23:54:54 INFO  Entry:189 - validate client while login
+2020-01-28 23:55:01 INFO  Entry:204 - get client print data for client portal
+2020-01-28 23:55:09 INFO  Entry:204 - get client print data for client portal
+2020-01-28 23:56:12 INFO  Entry:204 - get client print data for client portal
+2020-01-28 23:56:12 INFO  Entry:189 - validate client while login
+2020-01-28 23:56:12 INFO  Entry:222 - getClientTodayData
+2020-01-28 23:58:01 INFO  Entry:204 - get client print data for client portal
+2020-01-28 23:58:23 INFO  Entry:204 - get client print data for client portal
+2020-01-28 23:58:48 INFO  Entry:204 - get client print data for client portal
+2020-01-28 23:59:40 INFO  Entry:189 - validate client while login
+2020-01-28 23:59:41 INFO  Entry:204 - get client print data for client portal
+2020-01-28 23:59:43 INFO  Entry:204 - get client print data for client portal
+2020-01-28 23:59:54 INFO  Entry:189 - validate client while login
+2020-01-28 23:59:57 INFO  Entry:204 - get client print data for client portal
+2020-01-29 00:00:16 INFO  Entry:189 - validate client while login
+2020-01-29 00:00:18 INFO  Entry:204 - get client print data for client portal
+2020-01-29 00:01:40 INFO  Entry:204 - get client print data for client portal
+2020-01-29 00:02:10 INFO  Entry:205 - get client print data for client portal
+2020-01-29 00:03:05 INFO  Entry:189 - validate client while login
+2020-01-29 00:05:08 INFO  Entry:189 - validate client while login
+2020-01-29 00:05:24 INFO  Entry:189 - validate client while login
+2020-01-29 00:05:25 INFO  Entry:205 - get client print data for client portal
+2020-01-29 00:06:14 INFO  Entry:206 - get client print data for client portal
+2020-01-29 00:07:25 INFO  Entry:181 - count admin table entry
+2020-01-29 00:07:29 INFO  Entry:82 - verify admin
+2020-01-29 00:07:29 INFO  Entry:217 - Authorize admin for home page after admin login
+2020-01-29 00:07:35 INFO  Entry:70 - data retrived from print_details table by paremeter pragyan all null null
+2020-01-29 00:07:44 INFO  Entry:90 - verify client
+2020-01-29 00:07:44 INFO  Entry:189 - validate client while login
+2020-01-29 00:07:46 INFO  Entry:206 - get client print data for client portal
+2020-01-29 00:08:17 INFO  Entry:206 - get client print data for client portal
+2020-01-29 00:08:50 INFO  Entry:206 - get client print data for client portal
+2020-01-29 00:10:09 INFO  Entry:206 - get client print data for client portal
+2020-01-29 00:10:13 INFO  Entry:189 - validate client while login
+2020-01-29 00:10:30 INFO  Entry:206 - get client print data for client portal
+2020-01-29 00:12:02 INFO  Entry:203 - get client print data for client portal
+2020-01-29 00:12:28 INFO  Entry:203 - get client print data for client portal
+2020-01-29 00:13:48 INFO  Entry:189 - validate client while login
+2020-01-29 00:13:49 INFO  Entry:222 - getClientTodayData
+2020-01-29 00:13:57 INFO  Entry:189 - validate client while login
+2020-01-29 00:13:58 INFO  Entry:231 - getClientDateRangeData
+2020-01-29 00:21:16 INFO  Entry:82 - verify admin
+2020-01-29 00:21:17 INFO  Entry:214 - Authorize admin for home page after admin login
+2020-01-29 00:21:22 INFO  Entry:70 - data retrived from print_details table by paremeter root all null null
+2020-01-29 00:22:47 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 00:22:53 INFO  Entry:70 - data retrived from print_details table by paremeter pragyan all null null
+2020-01-29 00:23:05 INFO  Entry:90 - verify client
+2020-01-29 00:23:05 INFO  Entry:189 - validate client while login
+2020-01-29 00:23:07 INFO  Entry:203 - get client print data for client portal
+2020-01-29 00:25:36 INFO  Entry:189 - validate client while login
+2020-01-29 00:25:53 INFO  Entry:203 - get client print data for client portal
+2020-01-29 00:27:54 INFO  Entry:203 - get client print data for client portal
+2020-01-29 00:28:07 INFO  Entry:90 - verify client
+2020-01-29 00:28:07 INFO  Entry:189 - validate client while login
+2020-01-29 00:28:20 INFO  Entry:181 - count admin table entry
+2020-01-29 00:28:25 INFO  Entry:82 - verify admin
+2020-01-29 00:28:25 INFO  Entry:214 - Authorize admin for home page after admin login
+2020-01-29 00:28:28 INFO  Entry:164 - get all client
+2020-01-29 00:28:35 INFO  Entry:124 - delete client
+2020-01-29 00:28:35 INFO  Entry:164 - get all client
+2020-01-29 00:28:49 INFO  Entry:110 - new client added succesfully
+2020-01-29 00:28:57 INFO  Entry:90 - verify client
+2020-01-29 00:28:57 INFO  Entry:189 - validate client while login
+2020-01-29 00:28:58 INFO  Entry:203 - get client print data for client portal
+2020-01-29 00:30:07 INFO  Entry:189 - validate client while login
+2020-01-29 00:30:07 INFO  Entry:220 - getClientTodayData
+2020-01-29 00:30:18 INFO  Entry:202 - get client print data for client portal
+2020-01-29 00:31:57 INFO  Entry:181 - count admin table entry
+2020-01-29 00:32:03 INFO  Entry:82 - verify admin
+2020-01-29 00:32:03 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:32:10 INFO  Entry:110 - new client added succesfully
+2020-01-29 00:32:13 INFO  Entry:164 - get all client
+2020-01-29 00:32:15 INFO  Entry:124 - delete client
+2020-01-29 00:32:15 INFO  Entry:164 - get all client
+2020-01-29 00:32:43 INFO  Entry:90 - verify client
+2020-01-29 00:32:43 INFO  Entry:189 - validate client while login
+2020-01-29 00:32:44 INFO  Entry:202 - get client print data for client portal
+2020-01-29 00:33:21 INFO  Entry:189 - validate client while login
+2020-01-29 00:33:27 INFO  Entry:202 - get client print data for client portal
+2020-01-29 00:34:19 INFO  Entry:181 - count admin table entry
+2020-01-29 00:34:24 INFO  Entry:82 - verify admin
+2020-01-29 00:34:24 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:34:30 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 00:35:26 INFO  Entry:58 - log is readed succesfully
+2020-01-29 00:35:34 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 00:40:30 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:40:55 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:41:03 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:42:54 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:43:32 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:44:38 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:45:27 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:45:41 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:48:13 INFO  Entry:181 - count admin table entry
+2020-01-29 00:48:16 INFO  Entry:82 - verify admin
+2020-01-29 00:48:16 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:48:20 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 00:48:32 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:48:52 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:48:58 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:49:05 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:49:09 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 00:49:18 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:49:20 INFO  Entry:58 - log is readed succesfully
+2020-01-29 00:49:26 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 00:49:37 INFO  Entry:90 - verify client
+2020-01-29 00:49:37 INFO  Entry:189 - validate client while login
+2020-01-29 00:49:38 INFO  Entry:202 - get client print data for client portal
+2020-01-29 00:49:39 INFO  Entry:189 - validate client while login
+2020-01-29 00:49:39 INFO  Entry:220 - getClientTodayData
+2020-01-29 00:49:55 INFO  Entry:189 - validate client while login
+2020-01-29 00:49:55 INFO  Entry:229 - getClientDateRangeData
+2020-01-29 00:50:23 INFO  Entry:189 - validate client while login
+2020-01-29 00:50:27 INFO  Entry:181 - count admin table entry
+2020-01-29 00:50:31 INFO  Entry:82 - verify admin
+2020-01-29 00:50:37 INFO  Entry:82 - verify admin
+2020-01-29 00:50:38 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 00:50:43 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 10:33:44 INFO  Entry:181 - count admin table entry
+2020-01-29 10:33:49 INFO  Entry:82 - verify admin
+2020-01-29 10:33:49 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 10:33:50 INFO  Entry:181 - count admin table entry
+2020-01-29 10:34:46 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 10:34:53 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 10:35:13 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 10:35:19 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 10:36:15 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 10:36:24 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 10:37:17 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 10:37:44 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 10:37:56 INFO  Entry:70 - data retrived from print_details table by paremeter all alll null null
+2020-01-29 11:43:15 INFO  Entry:99 - report downloaded succesfully
+2020-01-29 11:44:24 INFO  Entry:99 - report downloaded succesfully
+2020-01-29 11:45:09 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 11:45:17 INFO  Entry:99 - report downloaded succesfully
+2020-01-29 11:45:22 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 11:45:25 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 11:45:32 INFO  Entry:99 - report downloaded succesfully
+2020-01-29 11:45:34 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 11:45:41 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 11:45:59 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 11:46:05 INFO  Entry:99 - report downloaded succesfully
+2020-01-29 11:46:33 INFO  Entry:181 - count admin table entry
+2020-01-29 11:46:37 INFO  Entry:82 - verify admin
+2020-01-29 11:46:37 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 11:46:42 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 11:46:53 INFO  Entry:58 - log is readed succesfully
+2020-01-29 11:46:56 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 11:48:02 INFO  Entry:58 - log is readed succesfully
+2020-01-29 11:48:06 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 11:49:06 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 11:49:08 INFO  Entry:58 - log is readed succesfully
+2020-01-29 11:49:10 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 11:55:56 INFO  Entry:58 - log is readed succesfully
+2020-01-29 11:55:59 INFO  Entry:58 - log is readed succesfully
+2020-01-29 11:56:00 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 11:56:11 INFO  Entry:70 - data retrived from print_details table by paremeter gaurav all null null
+2020-01-29 11:56:18 INFO  Entry:164 - get all client
+2020-01-29 11:56:47 INFO  Entry:164 - get all client
+2020-01-29 11:56:56 INFO  Entry:110 - new client added succesfully
+2020-01-29 11:57:00 INFO  Entry:164 - get all client
+2020-01-29 11:57:22 INFO  Entry:110 - new client added succesfully
+2020-01-29 11:57:24 INFO  Entry:164 - get all client
+2020-01-29 11:59:01 INFO  Entry:110 - new client added succesfully
+2020-01-29 11:59:04 INFO  Entry:164 - get all client
+2020-01-29 11:59:04 INFO  Entry:124 - delete client
+2020-01-29 11:59:09 INFO  Entry:164 - get all client
+2020-01-29 12:00:24 INFO  Entry:164 - get all client
+2020-01-29 12:00:45 INFO  Entry:164 - get all client
+2020-01-29 12:00:47 INFO  Entry:172 - get all admin
+2020-01-29 12:01:35 INFO  Entry:90 - verify client
+2020-01-29 12:01:35 INFO  Entry:189 - validate client while login
+2020-01-29 12:01:37 INFO  Entry:202 - get client print data for client portal
+2020-01-29 12:01:42 INFO  Entry:181 - count admin table entry
+2020-01-29 12:01:50 INFO  Entry:82 - verify admin
+2020-01-29 12:01:58 INFO  Entry:181 - count admin table entry
+2020-01-29 12:02:04 INFO  Entry:82 - verify admin
+2020-01-29 12:02:04 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 12:02:10 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 12:02:18 INFO  Entry:181 - count admin table entry
+2020-01-29 12:02:28 INFO  Entry:164 - get all client
+2020-01-29 12:02:42 INFO  Entry:90 - verify client
+2020-01-29 12:02:42 INFO  Entry:189 - validate client while login
+2020-01-29 12:02:43 INFO  Entry:202 - get client print data for client portal
+2020-01-29 12:03:00 INFO  Entry:189 - validate client while login
+2020-01-29 12:03:01 INFO  Entry:220 - getClientTodayData
+2020-01-29 12:03:47 INFO  Entry:189 - validate client while login
+2020-01-29 12:03:47 INFO  Entry:229 - getClientDateRangeData
+2020-01-29 12:03:56 INFO  Entry:189 - validate client while login
+2020-01-29 12:03:57 INFO  Entry:229 - getClientDateRangeData
+2020-01-29 12:05:14 INFO  Entry:90 - verify client
+2020-01-29 12:05:14 INFO  Entry:189 - validate client while login
+2020-01-29 12:05:16 INFO  Entry:202 - get client print data for client portal
+2020-01-29 12:15:29 INFO  Entry:181 - count admin table entry
+2020-01-29 12:15:36 INFO  Entry:82 - verify admin
+2020-01-29 12:15:36 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 12:15:52 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 12:16:08 INFO  Entry:70 - data retrived from print_details table by paremeter all all 2020-01-28 2020-01-30
+2020-01-29 12:16:51 INFO  Entry:181 - count admin table entry
+2020-01-29 12:17:11 INFO  Entry:82 - verify admin
+2020-01-29 12:17:11 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 12:17:14 INFO  Entry:172 - get all admin
+2020-01-29 12:19:33 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 12:24:54 INFO  Entry:181 - count admin table entry
+2020-01-29 12:25:07 INFO  Entry:181 - count admin table entry
+2020-01-29 12:25:22 INFO  Entry:90 - verify client
+2020-01-29 12:25:22 INFO  Entry:189 - validate client while login
+2020-01-29 12:25:31 INFO  Entry:202 - get client print data for client portal
+2020-01-29 12:25:46 INFO  Entry:189 - validate client while login
+2020-01-29 12:25:46 INFO  Entry:220 - getClientTodayData
+2020-01-29 12:26:50 INFO  Entry:189 - validate client while login
+2020-01-29 12:26:50 INFO  Entry:229 - getClientDateRangeData
+2020-01-29 12:27:10 INFO  Entry:181 - count admin table entry
+2020-01-29 12:27:16 INFO  Entry:82 - verify admin
+2020-01-29 12:27:16 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 12:27:30 INFO  Entry:70 - data retrived from print_details table by paremeter pragyan all null null
+2020-01-29 12:28:26 INFO  Entry:70 - data retrived from print_details table by paremeter all all 2020-01-28 2020-01-31
+2020-01-29 12:30:08 INFO  Entry:181 - count admin table entry
+2020-01-29 12:30:16 INFO  Entry:82 - verify admin
+2020-01-29 12:30:16 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 12:30:58 INFO  Entry:90 - verify client
+2020-01-29 12:30:58 INFO  Entry:189 - validate client while login
+2020-01-29 12:31:05 INFO  Entry:189 - validate client while login
+2020-01-29 12:31:25 INFO  Entry:90 - verify client
+2020-01-29 21:27:45 INFO  Entry:82 - verify admin
+2020-01-29 21:27:46 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 21:28:08 INFO  Entry:181 - count admin table entry
+2020-01-29 21:29:17 INFO  Entry:82 - verify admin
+2020-01-29 21:29:17 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 21:29:46 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 21:29:56 INFO  Entry:70 - data retrived from print_details table by paremeter all new-printer null null
+2020-01-29 21:30:02 INFO  Entry:70 - data retrived from print_details table by paremeter gaurav new-printer null null
+2020-01-29 21:30:19 INFO  Entry:58 - log is readed succesfully
+2020-01-29 21:31:01 INFO  Entry:49 - database is reseted succesfully
+2020-01-29 21:31:06 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-29 21:31:53 INFO  Entry:172 - get all admin
+2020-01-29 21:32:27 INFO  Entry:90 - verify client
+2020-01-29 21:32:27 INFO  Entry:189 - validate client while login
+2020-01-29 21:32:30 INFO  Entry:202 - get client print data for client portal
+2020-01-29 21:32:33 INFO  Entry:189 - validate client while login
+2020-01-29 21:32:33 INFO  Entry:220 - getClientTodayData
+2020-01-29 21:33:51 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:52 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:52 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:52 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:53 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:53 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:53 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:53 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:53 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:53 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:53 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:54 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:54 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:54 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:54 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:54 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:54 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:54 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:55 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:55 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:55 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:55 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:55 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:55 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:56 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:56 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:56 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:56 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:56 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:56 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:57 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:57 INFO  Entry:189 - validate client while login
+2020-01-29 21:33:57 INFO  Entry:189 - validate client while login
+2020-01-29 23:36:47 INFO  Entry:189 - validate client while login
+2020-01-29 23:37:17 INFO  Entry:181 - count admin table entry
+2020-01-29 23:37:43 INFO  Entry:82 - verify admin
+2020-01-29 23:37:43 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 23:38:14 INFO  Entry:90 - verify client
+2020-01-29 23:38:14 INFO  Entry:189 - validate client while login
+2020-01-29 23:39:28 INFO  Entry:189 - validate client while login
+2020-01-29 23:39:43 INFO  Entry:189 - validate client while login
+2020-01-29 23:39:52 INFO  Entry:202 - get client print data for client portal
+2020-01-29 23:41:35 INFO  Entry:189 - validate client while login
+2020-01-29 23:41:35 INFO  Entry:220 - getClientTodayData
+2020-01-29 23:51:25 INFO  Entry:90 - verify client
+2020-01-29 23:51:26 INFO  Entry:90 - verify client
+2020-01-29 23:51:30 INFO  Entry:90 - verify client
+2020-01-29 23:51:34 INFO  Entry:90 - verify client
+2020-01-29 23:51:38 INFO  Entry:90 - verify client
+2020-01-29 23:51:42 INFO  Entry:90 - verify client
+2020-01-29 23:51:58 INFO  Entry:90 - verify client
+2020-01-29 23:52:03 INFO  Entry:90 - verify client
+2020-01-29 23:52:14 INFO  Entry:181 - count admin table entry
+2020-01-29 23:52:20 INFO  Entry:82 - verify admin
+2020-01-29 23:52:20 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 23:52:23 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 23:52:32 INFO  Entry:172 - get all admin
+2020-01-29 23:52:34 INFO  Entry:164 - get all client
+2020-01-29 23:52:47 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 23:53:00 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-29 23:53:40 INFO  Entry:181 - count admin table entry
+2020-01-29 23:53:51 INFO  Entry:82 - verify admin
+2020-01-29 23:53:51 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 00:09:10 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 00:18:20 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 00:18:24 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 00:18:31 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 00:18:59 INFO  Entry:90 - verify client
+2020-01-30 00:18:59 INFO  Entry:189 - validate client while login
+2020-01-30 00:19:21 INFO  Entry:202 - get client print data for client portal
+2020-01-30 00:19:22 INFO  Entry:202 - get client print data for client portal
+2020-01-30 00:19:22 INFO  Entry:202 - get client print data for client portal
+2020-01-30 00:19:28 INFO  Entry:189 - validate client while login
+2020-01-30 00:19:28 INFO  Entry:220 - getClientTodayData
+2020-01-30 00:25:26 INFO  Entry:189 - validate client while login
+2020-01-30 00:25:27 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 01:38:12 INFO  Entry:202 - get client print data for client portal
+2020-01-30 01:53:49 INFO  Entry:181 - count admin table entry
+2020-01-30 01:54:05 INFO  Entry:181 - count admin table entry
+2020-01-30 01:54:40 INFO  Entry:181 - count admin table entry
+2020-01-30 01:54:54 INFO  Entry:82 - verify admin
+2020-01-30 01:54:54 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 01:55:20 INFO  Entry:172 - get all admin
+2020-01-30 01:55:37 INFO  Entry:172 - get all admin
+2020-01-30 01:55:37 INFO  Entry:152 - delete admin
+2020-01-30 01:55:45 INFO  Entry:172 - get all admin
+2020-01-30 01:55:55 INFO  Entry:138 - add new admin
+2020-01-30 01:56:02 INFO  Entry:181 - count admin table entry
+2020-01-30 01:56:06 INFO  Entry:82 - verify admin
+2020-01-30 01:56:06 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 01:56:29 INFO  Entry:181 - count admin table entry
+2020-01-30 01:56:36 INFO  Entry:82 - verify admin
+2020-01-30 01:56:51 INFO  Entry:181 - count admin table entry
+2020-01-30 01:56:56 INFO  Entry:82 - verify admin
+2020-01-30 01:56:56 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 01:56:59 INFO  Entry:172 - get all admin
+2020-01-30 01:57:09 INFO  Entry:172 - get all admin
+2020-01-30 01:57:58 INFO  Entry:181 - count admin table entry
+2020-01-30 01:58:01 INFO  Entry:82 - verify admin
+2020-01-30 01:58:12 INFO  Entry:82 - verify admin
+2020-01-30 01:58:12 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 01:58:23 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 01:59:07 INFO  Entry:70 - data retrived from print_details table by paremeter pragyan all null null
+2020-01-30 01:59:29 INFO  Entry:181 - count admin table entry
+2020-01-30 01:59:44 INFO  Entry:82 - verify admin
+2020-01-30 01:59:44 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 01:59:48 INFO  Entry:172 - get all admin
+2020-01-30 01:59:59 INFO  Entry:152 - delete admin
+2020-01-30 01:59:59 INFO  Entry:172 - get all admin
+2020-01-30 02:00:05 INFO  Entry:138 - add new admin
+2020-01-30 02:00:06 INFO  Entry:172 - get all admin
+2020-01-30 02:00:11 INFO  Entry:181 - count admin table entry
+2020-01-30 02:00:14 INFO  Entry:82 - verify admin
+2020-01-30 02:00:14 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 02:00:42 INFO  Entry:70 - data retrived from print_details table by paremeter pragyan all null null
+2020-01-30 02:01:07 INFO  Entry:70 - data retrived from print_details table by paremeter pragyan EPSON_printer null null
+2020-01-30 02:01:45 INFO  Entry:99 - report downloaded succesfully
+2020-01-30 02:02:03 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:03:26 INFO  Entry:58 - log is readed succesfully
+2020-01-30 02:03:41 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:03:56 INFO  Entry:58 - log is readed succesfully
+2020-01-30 02:03:57 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:04:18 INFO  Entry:58 - log is readed succesfully
+2020-01-30 02:04:20 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:04:22 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:04:22 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:04:22 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:04:23 INFO  Entry:58 - log is readed succesfully
+2020-01-30 02:04:24 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:05:18 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:07:04 INFO  Entry:49 - database is reseted succesfully
+2020-01-30 02:07:19 INFO  Entry:90 - verify client
+2020-01-30 02:07:19 INFO  Entry:189 - validate client while login
+2020-01-30 02:07:22 INFO  Entry:189 - validate client while login
+2020-01-30 02:07:22 INFO  Entry:220 - getClientTodayData
+2020-01-30 02:07:23 INFO  Entry:202 - get client print data for client portal
+2020-01-30 02:07:36 INFO  Entry:189 - validate client while login
+2020-01-30 02:07:36 INFO  Entry:220 - getClientTodayData
+2020-01-30 02:08:02 INFO  Entry:90 - verify client
+2020-01-30 02:08:03 INFO  Entry:189 - validate client while login
+2020-01-30 02:08:46 INFO  Entry:189 - validate client while login
+2020-01-30 02:08:58 INFO  Entry:90 - verify client
+2020-01-30 02:08:58 INFO  Entry:189 - validate client while login
+2020-01-30 02:09:09 INFO  Entry:202 - get client print data for client portal
+2020-01-30 02:09:11 INFO  Entry:189 - validate client while login
+2020-01-30 02:09:15 INFO  Entry:202 - get client print data for client portal
+2020-01-30 02:09:29 INFO  Entry:189 - validate client while login
+2020-01-30 02:09:41 INFO  Entry:90 - verify client
+2020-01-30 02:09:41 INFO  Entry:189 - validate client while login
+2020-01-30 02:10:00 INFO  Entry:202 - get client print data for client portal
+2020-01-30 02:28:44 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 02:28:44 INFO  Entry:181 - count admin table entry
+2020-01-30 02:28:46 INFO  Entry:181 - count admin table entry
+2020-01-30 02:28:49 INFO  Entry:82 - verify admin
+2020-01-30 02:28:53 INFO  Entry:82 - verify admin
+2020-01-30 02:28:53 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 02:29:22 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:29:47 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 02:29:48 INFO  Entry:181 - count admin table entry
+2020-01-30 02:29:53 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:30:36 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 02:30:37 INFO  Entry:181 - count admin table entry
+2020-01-30 02:30:56 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 02:30:57 INFO  Entry:181 - count admin table entry
+2020-01-30 02:31:20 INFO  Entry:58 - log is readed succesfully
+2020-01-30 02:31:20 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:31:42 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 02:31:42 INFO  Entry:58 - log is readed succesfully
+2020-01-30 02:32:04 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 02:32:05 INFO  Entry:181 - count admin table entry
+2020-01-30 08:54:27 INFO  Entry:172 - get all admin
+2020-01-30 08:54:37 INFO  Entry:164 - get all client
+2020-01-30 08:55:18 INFO  Entry:90 - verify client
+2020-01-30 08:55:18 INFO  Entry:189 - validate client while login
+2020-01-30 08:55:29 INFO  Entry:181 - count admin table entry
+2020-01-30 08:55:36 INFO  Entry:82 - verify admin
+2020-01-30 08:55:36 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 08:55:39 INFO  Entry:164 - get all client
+2020-01-30 08:56:59 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 08:57:38 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 08:57:39 INFO  Entry:58 - log is readed succesfully
+2020-01-30 08:58:16 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 08:58:16 INFO  Entry:58 - log is readed succesfully
+2020-01-30 08:58:17 INFO  Entry:58 - log is readed succesfully
+2020-01-30 08:58:17 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 08:58:27 INFO  Entry:90 - verify client
+2020-01-30 08:58:33 INFO  Entry:90 - verify client
+2020-01-30 08:58:33 INFO  Entry:189 - validate client while login
+2020-01-30 08:58:41 INFO  Entry:202 - get client print data for client portal
+2020-01-30 08:59:18 INFO  Entry:189 - validate client while login
+2020-01-30 08:59:19 INFO  Entry:189 - validate client while login
+2020-01-30 08:59:56 INFO  Entry:189 - validate client while login
+2020-01-30 08:59:57 INFO  Entry:189 - validate client while login
+2020-01-30 09:00:01 INFO  Entry:189 - validate client while login
+2020-01-30 09:00:03 INFO  Entry:189 - validate client while login
+2020-01-30 09:00:42 INFO  Entry:189 - validate client while login
+2020-01-30 09:00:43 INFO  Entry:189 - validate client while login
+2020-01-30 09:01:06 INFO  Entry:189 - validate client while login
+2020-01-30 09:01:07 INFO  Entry:189 - validate client while login
+2020-01-30 09:01:23 INFO  Entry:189 - validate client while login
+2020-01-30 09:01:23 INFO  Entry:189 - validate client while login
+2020-01-30 09:02:15 INFO  Entry:189 - validate client while login
+2020-01-30 09:02:16 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:11 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:11 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:17 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:18 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:22 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:22 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:26 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:26 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:42 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:42 INFO  Entry:202 - get client print data for client portal
+2020-01-30 09:03:53 INFO  Entry:90 - verify client
+2020-01-30 09:03:53 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:59 INFO  Entry:189 - validate client while login
+2020-01-30 09:03:59 INFO  Entry:189 - validate client while login
+2020-01-30 09:04:05 INFO  Entry:90 - verify client
+2020-01-30 09:04:05 INFO  Entry:189 - validate client while login
+2020-01-30 09:04:09 INFO  Entry:189 - validate client while login
+2020-01-30 09:04:15 INFO  Entry:181 - count admin table entry
+2020-01-30 09:04:20 INFO  Entry:82 - verify admin
+2020-01-30 09:04:20 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:04:26 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:04:26 INFO  Entry:181 - count admin table entry
+2020-01-30 09:04:32 INFO  Entry:82 - verify admin
+2020-01-30 09:04:32 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:04:37 INFO  Entry:58 - log is readed succesfully
+2020-01-30 09:04:46 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:04:46 INFO  Entry:181 - count admin table entry
+2020-01-30 09:05:07 INFO  Entry:181 - count admin table entry
+2020-01-30 09:05:08 INFO  Entry:189 - validate client while login
+2020-01-30 09:05:15 INFO  Entry:181 - count admin table entry
+2020-01-30 09:05:16 INFO  Entry:189 - validate client while login
+2020-01-30 09:07:37 INFO  Entry:181 - count admin table entry
+2020-01-30 09:07:38 INFO  Entry:189 - validate client while login
+2020-01-30 09:07:48 INFO  Entry:181 - count admin table entry
+2020-01-30 09:07:48 INFO  Entry:189 - validate client while login
+2020-01-30 09:08:23 INFO  Entry:181 - count admin table entry
+2020-01-30 09:08:23 INFO  Entry:189 - validate client while login
+2020-01-30 09:08:31 INFO  Entry:181 - count admin table entry
+2020-01-30 09:08:32 INFO  Entry:189 - validate client while login
+2020-01-30 09:08:40 INFO  Entry:181 - count admin table entry
+2020-01-30 09:08:40 INFO  Entry:189 - validate client while login
+2020-01-30 09:08:51 INFO  Entry:181 - count admin table entry
+2020-01-30 09:08:52 INFO  Entry:189 - validate client while login
+2020-01-30 09:08:58 INFO  Entry:82 - verify admin
+2020-01-30 09:08:59 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:09:03 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:09:03 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:09:03 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 09:09:03 INFO  Entry:58 - log is readed succesfully
+2020-01-30 09:09:08 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:09:08 INFO  Entry:58 - log is readed succesfully
+2020-01-30 09:09:08 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:09:08 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 09:09:08 INFO  Entry:181 - count admin table entry
+2020-01-30 09:09:13 INFO  Entry:82 - verify admin
+2020-01-30 09:09:13 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:09:27 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:09:27 INFO  Entry:181 - count admin table entry
+2020-01-30 09:09:39 INFO  Entry:82 - verify admin
+2020-01-30 09:09:39 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:09:40 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:09:53 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:09:53 INFO  Entry:49 - database is reseted succesfully
+2020-01-30 09:09:58 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:09:58 INFO  Entry:181 - count admin table entry
+2020-01-30 09:09:58 INFO  Entry:49 - database is reseted succesfully
+2020-01-30 09:10:02 INFO  Entry:82 - verify admin
+2020-01-30 09:10:02 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:11:03 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:11:04 INFO  Entry:189 - validate client while login
+2020-01-30 09:11:04 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:11:04 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:11:04 INFO  Entry:58 - log is readed succesfully
+2020-01-30 09:12:15 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:12:16 INFO  Entry:189 - validate client while login
+2020-01-30 09:12:21 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:12:22 INFO  Entry:189 - validate client while login
+2020-01-30 09:12:28 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:12:28 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:12:28 INFO  Entry:58 - log is readed succesfully
+2020-01-30 09:12:28 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 09:12:30 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:12:30 INFO  Entry:58 - log is readed succesfully
+2020-01-30 09:12:34 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:12:34 INFO  Entry:58 - log is readed succesfully
+2020-01-30 09:12:37 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:12:37 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:12:37 INFO  Entry:58 - log is readed succesfully
+2020-01-30 09:12:41 INFO  Entry:99 - report downloaded succesfully
+2020-01-30 09:12:52 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:13:06 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:13:27 INFO  Entry:90 - verify client
+2020-01-30 09:13:27 INFO  Entry:189 - validate client while login
+2020-01-30 09:14:10 INFO  Entry:181 - count admin table entry
+2020-01-30 09:14:10 INFO  Entry:138 - add new admin
+2020-01-30 09:14:14 INFO  Entry:82 - verify admin
+2020-01-30 09:14:14 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 09:14:19 INFO  Entry:172 - get all admin
+2020-01-30 11:29:31 INFO  Entry:181 - count admin table entry
+2020-01-30 11:29:40 INFO  Entry:82 - verify admin
+2020-01-30 11:29:41 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 11:29:51 INFO  Entry:164 - get all client
+2020-01-30 11:29:54 INFO  Entry:172 - get all admin
+2020-01-30 11:29:58 INFO  Entry:172 - get all admin
+2020-01-30 11:29:58 INFO  Entry:152 - delete admin
+2020-01-30 11:30:05 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 11:30:05 INFO  Entry:181 - count admin table entry
+2020-01-30 11:30:05 INFO  Entry:138 - add new admin
+2020-01-30 11:30:15 INFO  Entry:181 - count admin table entry
+2020-01-30 11:30:19 INFO  Entry:82 - verify admin
+2020-01-30 11:30:20 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 11:30:24 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 11:30:24 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 11:30:24 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 11:30:24 INFO  Entry:58 - log is readed succesfully
+2020-01-30 11:30:45 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 11:30:45 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 11:30:45 INFO  Entry:58 - log is readed succesfully
+2020-01-30 11:30:45 INFO  Entry:70 - data retrived from print_details table by paremeter pragyan all null null
+2020-01-30 11:31:12 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 11:31:12 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 11:31:12 INFO  Entry:70 - data retrived from print_details table by paremeter pragyan new-printer null null
+2020-01-30 11:31:12 INFO  Entry:58 - log is readed succesfully
+2020-01-30 11:33:13 INFO  Entry:90 - verify client
+2020-01-30 11:33:13 INFO  Entry:189 - validate client while login
+2020-01-30 11:33:19 INFO  Entry:189 - validate client while login
+2020-01-30 11:33:19 INFO  Entry:202 - get client print data for client portal
+2020-01-30 11:33:23 INFO  Entry:189 - validate client while login
+2020-01-30 11:33:23 INFO  Entry:189 - validate client while login
+2020-01-30 11:33:23 INFO  Entry:220 - getClientTodayData
+2020-01-30 11:33:31 INFO  Entry:189 - validate client while login
+2020-01-30 11:33:32 INFO  Entry:202 - get client print data for client portal
+2020-01-30 11:34:15 INFO  Entry:90 - verify client
+2020-01-30 11:34:15 INFO  Entry:189 - validate client while login
+2020-01-30 11:34:37 INFO  Entry:189 - validate client while login
+2020-01-30 12:58:22 INFO  Entry:181 - count admin table entry
+2020-01-30 13:01:18 INFO  Entry:181 - count admin table entry
+2020-01-30 13:01:51 INFO  Entry:82 - verify admin
+2020-01-30 13:01:51 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:03:38 INFO  Entry:172 - get all admin
+2020-01-30 13:05:29 INFO  Entry:164 - get all client
+2020-01-30 13:06:05 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:09:12 INFO  Entry:181 - count admin table entry
+2020-01-30 13:09:17 INFO  Entry:82 - verify admin
+2020-01-30 13:09:17 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:09:21 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:09:21 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:09:21 INFO  Entry:58 - log is readed succesfully
+2020-01-30 13:09:21 INFO  Entry:70 - data retrived from print_details table by paremeter all all null null
+2020-01-30 13:09:34 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:09:34 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:09:34 INFO  Entry:70 - data retrived from print_details table by paremeter pragyan all null null
+2020-01-30 13:09:34 INFO  Entry:58 - log is readed succesfully
+2020-01-30 13:09:49 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:09:49 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:09:49 INFO  Entry:58 - log is readed succesfully
+2020-01-30 13:09:49 INFO  Entry:70 - data retrived from print_details table by paremeter pragyan EPSON_printer null null
+2020-01-30 13:10:11 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:10:11 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:10:11 INFO  Entry:58 - log is readed succesfully
+2020-01-30 13:10:13 INFO  Entry:99 - report downloaded succesfully
+2020-01-30 13:11:03 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:11:03 INFO  Entry:49 - database is reseted succesfully
+2020-01-30 13:11:13 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:11:13 INFO  Entry:212 - Authorize admin for home page after admin login
+2020-01-30 13:11:13 INFO  Entry:58 - log is readed succesfully
+2020-01-30 13:11:13 INFO  Entry:70 - data retrived from print_details table by paremeter pragyan all 2020-01-26 2020-01-28
+2020-01-30 13:11:19 INFO  Entry:172 - get all admin
+2020-01-30 13:11:22 INFO  Entry:164 - get all client
+2020-01-30 13:11:34 INFO  Entry:172 - get all admin
+2020-01-30 13:12:06 INFO  Entry:138 - add new admin
+2020-01-30 13:12:09 INFO  Entry:172 - get all admin
+2020-01-30 13:12:20 INFO  Entry:90 - verify client
+2020-01-30 13:12:21 INFO  Entry:189 - validate client while login
+2020-01-30 13:12:22 INFO  Entry:189 - validate client while login
+2020-01-30 13:12:22 INFO  Entry:202 - get client print data for client portal
+2020-01-30 13:12:28 INFO  Entry:189 - validate client while login
+2020-01-30 13:12:28 INFO  Entry:189 - validate client while login
+2020-01-30 13:12:28 INFO  Entry:220 - getClientTodayData
+2020-01-30 13:12:36 INFO  Entry:189 - validate client while login
+2020-01-30 13:12:36 INFO  Entry:189 - validate client while login
+2020-01-30 13:12:36 INFO  Entry:229 - getClientDateRangeData

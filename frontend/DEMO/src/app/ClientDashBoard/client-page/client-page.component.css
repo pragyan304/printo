@@ -1,0 +1,319 @@
+@font-face {
+  font-family: "Name of your font";
+  src: url(/assets/fonts/Aclonica.ttf);
+}
+* {
+font-family: "shashwat";
+}
+
+@font-face {
+font-family: "Name of your font";
+src: url(/assets/fonts/BerkshireSwash-Regular.ttf);
+}
+* {
+font-family: "Name of your font";
+}
+
+
+
+
+
+@media print{
+  .doNotPrint{display:none !important;}
+}
+
+
+
+datalist {
+    display: none;
+  }
+  
+  input.input1 {
+    height: 30px;
+    border-radius: 25px;
+    padding: 0 30px;
+    box-align: center;
+    margin: 10px;
+  
+  }
+  input.input1 + .shadow-input1 {
+    border-radius: 25px;
+    box-align: center;
+  }
+  
+  .input1 {
+    /* display: block; */
+    width: 20%;
+    background: #e6e6e6;
+    font-family: Montserrat-Bold;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #666666;
+    text-align: center;
+    box-align: center;
+    
+  }
+  
+  .shadow-input1 {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 0px 0px;
+    color: rgba(87,184,70, 0.5);
+    box-align: center;
+  }
+  
+  
+  p#aoo {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #999;
+  }
+  
+  
+  
+  .button1 {
+            color: white;
+            border-radius: 8px;
+            padding: 10px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background: rgb(25, 99, 209);
+  
+        }
+  
+  
+  
+  
+  
+  /*-------------------------------------------------------------*/
+  
+  
+  
+  body {
+    background-color: #3e94ec;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+  
+  }
+  .example_e {
+    border: none;
+    background:#3f71d4;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 5px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    }
+  
+  div.table-title {
+     display: block;
+    margin: auto;
+    max-width: 90%;
+    padding:5px;
+    width: 100%;
+  }
+  
+  .table-title h3 {
+     color: #fafafa;
+     font-size: 30px;
+     font-weight: 400;
+     font-style:normal;
+     font-family: "Roboto", helvetica, arial, sans-serif;
+     text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+     text-transform:uppercase;
+  
+  }
+  
+  
+  /*** Table Styles **/
+  
+  .table-fill {
+    background: white;
+    border-radius:3px;
+    border-collapse: collapse;
+    height: 320px;
+    margin: auto;
+    padding:5px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+  
+  }
+  
+  th {
+    color:white;
+    background:#3f71d4;
+    border-bottom:4px solid #9ea7af;
+    border-right: 1px solid #343a45;
+    font: size 18px;
+    font-weight: 100;
+    padding:24px;
+    text-align:center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    vertical-align:middle;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+  }
+  
+  th:first-child {
+    border-top-left-radius:3px;
+  }
+  
+  th:last-child {
+    border-top-right-radius:3px;
+    border-right:none;
+  }
+  
+  tr {
+    border-top: 1px solid #C1C3D1;
+    border-bottom: 1px solid #C1C3D1;
+    color:#666B85;
+    font-size:16px;
+    font-weight:normal;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+  }
+  
+  tr:hover td {
+    background:#4E5066;
+    color:#FFFFFF;
+    border-top: 1px solid #22262e;
+  
+  }
+  
+   tr:first-child {
+    border-top:none;
+  }
+  
+  tr:last-child {
+    border-bottom:none;
+  }
+  
+  tr:nth-child(odd) td {
+    background:#EBEBEB;
+  }
+  
+  tr:nth-child(odd):hover td {
+    background:#4E5066;
+  }
+  
+  tr:last-child td:first-child {
+    border-bottom-left-radius:3px;
+  }
+  
+  tr:last-child td:last-child {
+    border-bottom-right-radius:3px;
+  }
+  
+  td {
+    background:#FFFFFF;
+    padding:20px;
+    text-align:center;
+    vertical-align:middle;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:300;
+    font-size:20px;
+    text-shadow: -1px -1px 1px rgba(230, 218, 218, 0.1);
+    border-right: 1px solid #C1C3D1;
+    width: 10%;
+    color: black;
+  }
+  
+  td:last-child {
+    border-right: 0px;
+  }
+  
+  th.text-left {
+    text-align: left;
+  }
+  
+  th.text-center {
+    text-align: center;
+  }
+  
+  th.text-right {
+    text-align: right;
+  }
+  
+  td.text-left {
+    text-align: left;
+  }
+  
+  td.text-center {
+    text-align: center;
+  }
+  
+  td.text-right {
+    text-align: right;
+  }
+  
+  #a00{
+  margin: 10px 0;
+  padding: 5px;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: red;
+  }
+  
+  #a01{
+  margin: 10px 0;
+  padding: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: red;
+  font-size: large;
+  }
+  
+  #title1{
+    
+  color: rgb(4, 0, 255);
+  margin: 0;
+  font-size: 70px;
+  padding: 0;
+  }
+  
+  .button1 {
+    margin: 10px;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(25, 99, 209);
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+  }
+  #para1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: xx-large;
+  }
+  
+  #status1{
+    color: #000000;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+  }
+  #errmsgs{
+    color: #000000;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    font-size:
+    
+    30px;
+  }
+  #maindiv{
+    border-radius: 10px;
+    background-image: url("src/assets/Img/pic2.jpg");
+    height: 100%;
+   }
+     

@@ -1,0 +1,56 @@
+package com.printo.project;
+
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.printo.project.entities.Admin;
+
+
+@Repository
+public interface ClientDB extends JpaRepository<Client, String> {
+	
+	
+	// add client to db
+	@Modifying
+	  @Transactional
+	    @Query(value = "insert into client (id,clientpcname,email,name,password) "
+	    		+ "VALUES (:id,:clientpcname,:email,:name,:password)", nativeQuery = true)
+	    int addClientFinalToDB(@Param("id") String id,
+	    		@Param("clientpcname") String clientpcname,
+	    		@Param("email") String email,
+	    		@Param("name") String name,
+	    		@Param("password") String password);
+	
+		
+	//  Client data verification
+		@Query("FROM client WHERE id= :x") 
+		Client findDataById(@Param("x")String id);
+	
+		// delete
+		@Modifying
+		@Transactional
+		@Query("delete from client where id=:id")
+		int deleteByIdClient(@Param("id")String id);
+		
+		
+		
+		@Query("FROM client WHERE id= :x") 
+		Client findClientById(@Param("x")String id);
+
+		@Query("FROM admin WHERE id= :x") 
+		Admin findAdminById(@Param("x")String id);
+		
+
+	
+}
+	
+	

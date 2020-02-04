@@ -1,0 +1,89 @@
+
+package printo.newd;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity(name="print_details")
+@Table(name="print_details")
+public class PrintDetails {
+	@Id
+	int jobid;
+	@Column
+    String printername;
+	@Column
+    String username;  
+	@Column
+    String jobname;
+	@Column
+    int sheet;
+    public PrintDetails() {}
+    public PrintDetails(int jobid, String printername, String username, String jobname, int sheet) {
+		this.jobid = jobid;
+		this.printername = printername;
+		this.username = username;
+		this.jobname = jobname;
+		this.sheet = sheet;
+	}
+    public PrintDetails(String printername, String username, String jobname, int sheet) {
+  		this.printername = printername;
+  		this.username = username;
+  		this.jobname = jobname;
+  		this.sheet = sheet;
+  	}
+//    public PrintDetails(String username,String printername, String jobname) {
+//		this.printername = printername;
+//		this.username = username;
+//		this.jobname = jobname;
+//	}
+    public PrintDetails(String printername) {
+		this.printername = printername;
+	}
+    
+
+	public String getPrintername() {
+        return printername;
+    }
+
+    public void setPrintername(String printername) {
+        this.printername = printername;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public int getJobid() {
+        return jobid;
+    }
+
+    public void setJobid(int jobid) {
+        this.jobid = jobid;
+    }
+    public String getJobname() {
+        return jobname;
+    }
+
+    public void setJobname(String jobname) {
+        this.jobname = jobname;
+    }
+
+    public int getSheet() {
+        return sheet;
+    }
+
+    public void setSheet(int sheet) {
+        this.sheet = sheet;
+    }
+    @Override
+    public String toString() {
+        return this.jobid+" "+this.jobname+" "+this.printername+" "+this.sheet+" "+this.username;
+    }
+	
+}

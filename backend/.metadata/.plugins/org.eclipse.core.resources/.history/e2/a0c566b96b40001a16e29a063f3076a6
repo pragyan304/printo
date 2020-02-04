@@ -1,0 +1,9 @@
+package com.in28minutes.rest.webservices.restfulwebservices.jwt;
+
+class UsernameNotFoundException extends Exception {
+
+	public UsernameNotFoundException(String format) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

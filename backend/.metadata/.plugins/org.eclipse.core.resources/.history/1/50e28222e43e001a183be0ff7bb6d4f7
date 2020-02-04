@@ -1,0 +1,105 @@
+
+package com.printo.project.entities;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity(name="print_details")
+@Table(name="print_details")
+public class PrintDetails {
+	@Id
+	@Column(nullable = false)
+	int jobid;
+	@Column(nullable = false)
+    String printername;
+	@Column(nullable = false)
+    String username;  
+	@Column(nullable = false)
+    String jobname;
+	@Column(nullable = false)
+    int sheet;
+//	@Column()
+//	private Date date;
+//	
+//	
+//	public Date getDate() {
+//		return date;
+//	}
+//
+//	public void setDate(Date date) {
+//		this.date = date;
+//	}
+	
+    public PrintDetails() {}
+    public PrintDetails(int jobid, String printername, String username, String jobname, int sheet) {
+		this.jobid = jobid;
+		this.printername = printername;
+		this.username = username;
+		this.jobname = jobname;
+		this.sheet = sheet;
+	}
+    public PrintDetails(String printername, String username, String jobname, int sheet,Date date) {
+  		this.printername = printername;
+  		this.username = username;
+  		this.jobname = jobname;
+  		this.sheet = sheet;
+  		this.date=date;
+  	}
+//    public PrintDetails(String username,String printername, String jobname) {
+//		this.printername = printername;
+//		this.username = username;
+//		this.jobname = jobname;
+//	}
+    public PrintDetails(String printername) {
+		this.printername = printername;
+	}
+    
+
+	public String getPrintername() {
+        return printername;
+    }
+
+    public void setPrintername(String printername) {
+        this.printername = printername;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public int getJobid() {
+        return jobid;
+    }
+
+    public void setJobid(int jobid) {
+        this.jobid = jobid;
+    }
+    public String getJobname() {
+        return jobname;
+    }
+
+    public void setJobname(String jobname) {
+        this.jobname = jobname;
+    }
+
+    public int getSheet() {
+        return sheet;
+    }
+
+    public void setSheet(int sheet) {
+        this.sheet = sheet;
+    }
+    @Override
+    public String toString() {
+        return this.jobid+" "+this.jobname+" "+this.printername+" "+this.sheet+" "+this.username;
+    }
+	
+}

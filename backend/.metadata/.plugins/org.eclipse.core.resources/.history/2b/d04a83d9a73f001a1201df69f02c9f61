@@ -1,0 +1,97 @@
+package com.printo.project.database;
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.printo.project.entities.PrintDetails;
+
+
+@Repository
+public interface PrintLogDB extends PagingAndSortingRepository<PrintDetails, Integer> {
+	
+	
+	  @Modifying
+	  @Transactional
+	    @Query(
+	            value = "truncate table print_details",
+	            nativeQuery = true
+	    )
+	    void truncateMyTable();
+	
+	
+	
+	
+	@Modifying
+	  @Transactional
+	    @Query(value = "insert into print_details (jobid,printername,username,jobname,sheet,date) "
+	    		+ "VALUES (:id,:pn,:us,:jb,:s,:d)", nativeQuery = true)
+	    int logURI(@Param("id") int jobid,
+	    		@Param("pn") String printername,
+	    		@Param("us") String username,
+	    		@Param("jb") String jobname,
+	    		@Param("s") int  sheet,
+	    		@Param("d") Date date);
+	
+	@Modifying
+	@Transactional
+	@Query("UPDATE print_details u SET u.sheet = :s WHERE u.jobid = :id")
+		int update1(@Param("s") int sheet, @Param("id") int jobid);
+  
+	
+	@Query("FROM print_details WHERE username = :x") 
+	Collection<PrintDetails> two(@Param("x")String username);
+	
+	@Query("FROM print_details WHERE username = :x and printername= :y") 
+	Collection<PrintDetails> three(@Param("x")String username,@Param("y") String printername);
+
+	@Query("FROM print_details WHERE username = :x and printername= :y and jobname= :z") 
+	Collection<PrintDetails> four(@Param("x")String username, @Param("y")String printername,@Param("z") String jobname);
+	
+	
+	
+	
+	@Query("FROM print_details WHERE date>= :d and date<= :d1 and username = :x and printername= :y") 
+	Collection<PrintDetails> specifycPrinterRecordWithSpecifyDate(@Param("x")String username,
+								  @Param("y")String printername,
+								  @DateTimeFormat(pattern = "yyyy-MM-dd")	  @Param("d")  java.sql.Date date,
+								  @DateTimeFormat(pattern = "yyyy-MM-dd")	  @Param("d1")  java.sql.Date date1);	
+	
+	
+	@Query("FROM print_details WHERE date>= :d and date<= :d1") 
+	Collection<PrintDetails> allRecordWithSpecifyDate(@Param("d")  java.sql.Date date,@Param("d1")  java.sql.Date date1);
+
+	@Query("FROM print_details WHERE date>= :d and date<= :d1 and username = :x") 
+	Collection<PrintDetails> specifycUserRecordWithSpecifyDate(@Param("x")String username,
+								  @DateTimeFormat(pattern = "yyyy-MM-dd")	  @Param("d")  java.sql.Date date,
+								  @DateTimeFormat(pattern = "yyyy-MM-dd")	  @Param("d1")  java.sql.Date date1);	
+	
+	@Query("FROM print_details WHERE date>= :d and date<= :d1") 
+	Collection<PrintDetails> specifycPrinterRecordWithSpecifyDate(
+								  @DateTimeFormat(pattern = "yyyy-MM-dd")	  @Param("d")  java.sql.Date date,
+								  @DateTimeFormat(pattern = "yyyy-MM-dd")	  @Param("d1")  java.sql.Date date1);
+
+
+
+	@Query("FROM print_details WHERE date>= :d and date<= :d1") 
+	Collection<PrintDetails> getClientTodayDataDB(@Param("username") String username, 
+												  @Param("d1") java.sql.Date date);	
+
+	
+	
+//	@Query(value ="select * from table st where st.created_date >= ?1", nativeQuery = true)
+//    List<YourObject> findAllByCreatedDate(@Param("createdDate") @DateTimeFormat(iso = ISO.DATE) String createdDate);
+
+}
+
+

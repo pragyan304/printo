@@ -1,0 +1,81 @@
+package com.printo.project;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.printo.project.database.PrintLogDB;
+import com.printo.project.entities.PrintDetails;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
+import java.util.Iterator; 
+import java.util.Date;  
+@Service
+public class Demo{
+	 @Autowired
+	private PrintLogDB printLogDB1;
+	 
+	@SuppressWarnings("deprecation")
+	public  void read()  {
+		try {
+
+			  JSONParser parser = new JSONParser();
+			  FileReader fr=new FileReader("xyz");
+			  BufferedReader br=new BufferedReader(fr);
+			  String ss=null;
+			  while((ss=br.readLine())!=null) {
+				  JSONObject jsonObject = (JSONObject) parser.parse(ss);
+		          String printername = (String) jsonObject.get("printername");
+		          String user = (String) jsonObject.get("user");
+		          String jobids = (String) jsonObject.get("jobid");
+		          int jobid=Integer.parseInt(jobids);
+		          String datetime = (String) jsonObject.get("datetime");
+		          
+		          
+		          String abc=datetime.replace("[","");
+		          String[] data=abc.split(" ");
+		          String temp=data[0];
+		          String[] data1=temp.split(":");
+		          temp=data1[0];
+		          
+		          SimpleDateFormat formatter2=new SimpleDateFormat("dd/MMM/yyyy");  
+		          Date date2=formatter2.parse(temp);  
+		          
+		          
+		          String pagecounts = (String) jsonObject.get("pagecount");
+		          int pagecount=Integer.parseInt(pagecounts);
+		          String filename = (String) jsonObject.get("filename");
+		          System.out.println(printername);
+		          System.out.println(user);
+		          System.out.println(jobid);
+		          System.out.println(temp);
+		          System.out.println(pagecount);
+		          System.out.println(filename);
+		          System.out.println("************");
+		          
+		          PrintDetails p=new PrintDetails();
+		          p.setJobid(jobid);
+		          p.setJobname(filename);
+		          p.setPrintername(printername);
+		          p.setSheet(pagecount);
+		          p.setUsername(user);
+		          p.setDate(date2);
+		          printLogDB1.logURI(p.getJobid(), p.getPrintername(), p.getUsername(), p.getJobname(), p.getSheet(),p.getDate());
+		          
+		}
+		}
+			  catch (Exception e) {
+				  e.printStackTrace();
+			  }
+			
+		}
+}

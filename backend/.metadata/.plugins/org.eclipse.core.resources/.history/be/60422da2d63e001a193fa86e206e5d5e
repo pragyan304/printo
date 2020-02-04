@@ -1,0 +1,47 @@
+package com.printo.project;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.Iterator;
+
+public class Demo{
+	public static void main(String[] args) throws Exception {
+		
+//		JSONParser jsonParser = new JSONParser();
+//		FileReader fr=new FileReader("xyz2.json");
+//		System.out.println("succ");
+//		  JSONObject jsonObject = (JSONObject) jsonParser.parse(fr);
+	        // String id = (String) jsonObject.get("printername");
+		//System.out.println("shahswat "+id);
+		  JSONParser parser = new JSONParser();
+		  //Reader reader = new FileReader("xyz2.json");
+		  
+		  
+		  FileReader fr=new FileReader("xyz");
+		  BufferedReader br=new BufferedReader(fr);
+		  String ss=br.readLine();
+		 // System.out.println(ss);
+          JSONObject jsonObject = (JSONObject) parser.parse(ss);
+          String name = (String) jsonObject.get("printername");
+          System.out.println(name);
+           ss=br.readLine();
+		  //System.out.println(ss);
+           jsonObject = (JSONObject) parser.parse(ss);
+           name = (String) jsonObject.get("printername");
+          System.out.println(name);
+          
+		  
+		  
+		  
+		  
+		  System.out.println("succ");
+		
+	}	
+}

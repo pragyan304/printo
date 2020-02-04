@@ -1,0 +1,154 @@
+package com.printo.project;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Optional;
+import java.util.ResourceBundle;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.printo.project.database.PrintLogDB;
+import com.printo.project.database.TableLineCountDB;
+import com.printo.project.entities.PrintDetails;
+import com.printo.project.entities.TableLineCount;
+
+@Service
+public class ReadData {
+	 long no;
+	 long backup;
+	 @Autowired
+	 private TableLineCountDB countDB;	 
+	 @Autowired
+	private PrintLogDB printLogDB1;
+	 
+	
+	public  void read() {
+		no=0;
+		ResourceBundle rb=ResourceBundle.getBundle("new");			
+		String w=rb.getString("path");
+		FileReader fr = null;
+		try {
+			fr = new FileReader(w);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	     BufferedReader br = new BufferedReader(fr);
+	     show(br);
+	     System.out.println("success");
+	}
+	private  void show(BufferedReader br)  {
+        try {
+       	String str=null;
+       	long count=countDB.count();
+       	System.out.println("no of columns"+count);
+       	if(count==0) {
+       		countDB.insertLine(1, 0);
+       	}
+       Optional<TableLineCount> y=countDB.findById(1);
+       
+       	System.out.println("data "+y.get().getStatus());
+       	backup=y.get().getStatus();
+       	long page=y.get().getStatus();
+       	while(page!=0) {
+       		br.readLine();
+       		System.out.println("times "+page);
+       		--page;
+       	}
+            while((str=br.readLine())!=null){
+            	++no;
+//            	System.out.println("*******************************");
+//            	System.out.println("me20 "+x);
+                split(str);
+                
+		} 
+        }catch (Exception e) {
+        	e.printStackTrace();
+		}
+    }
+	private  void split(String str) {
+        String[] arrOfStr = str.split(", ");
+       for (int i = 0; i < arrOfStr.length; i++) {
+       }
+       splitEach(arrOfStr);
+    }
+	private  void splitEach(String[] arrOfStr)  {
+		 PrintDetails p=null;
+		try {
+
+	       p=new PrintDetails();
+	        for (int i = 0; i < arrOfStr.length; i++) {
+	        	
+	           switch(i){
+	               case 0: {
+	                   String test=arrOfStr[i];
+	                   String []test1=test.split(":");
+	                  // System.out.println("printer name "+test1[1]);
+	                   p.setPrintername(test1[1]);
+	                   break;
+	               }
+	               case 1: {
+	                String test=arrOfStr[i];
+	                String []test1=test.split(":");
+	                p.setUsername(test1[1]);
+	                break;
+	            }
+	            case 2: {
+	                String test=arrOfStr[i];
+	                   String []test1=test.split(":");
+	                   int num=Integer.parseInt(test1[1]);
+	                   p.setJobid(num);
+	                break;
+	            }
+	            case 4: {
+	                String test=arrOfStr[i];
+	                   String []test1=test.split(":");
+	                   p.setJobname(test1[1]);
+	                break;
+	            }
+	            case 6: {
+	                 String test=arrOfStr[i];
+	                    String []test1=test.split(":");
+	                    String test2=test1[1];
+	                   // System.out.println(test2);
+	                   String []test3=test2.split("");
+	                   int num=Integer.parseInt(test3[0]);
+	                   p.setSheet(num);
+	                break;
+	            }
+	            default: break;
+	        
+	           }
+	        }
+		}
+		catch (Exception e) {
+			System.out.println("shashwta");
+			e.printStackTrace();
+		}
+		
+       try {
+    	   System.out.println(p.getJobid()+" "+p.getPrintername()+" "+ p.getUsername()+" "+ p.getJobname()+" "+ p.getSheet());
+    	   printLogDB1.logURI(p.getJobid(), p.getPrintername(), p.getUsername(), p.getJobname(), p.getSheet());
+       } catch (Exception e) {
+		try {
+			printLogDB1.update1(p.getSheet(),p.getJobid());
+		} catch (Exception e2) {
+		//System.out.println("Exception one is occure");
+			//e2.printStackTrace();
+		}
+		//System.out.println("Exception two is occure");
+		//e.printStackTrace();
+       }
+       // System.out.println(p);
+       	setLogLine();
+        
+    }
+	private void setLogLine(){
+		TableLineCount nooflines=new TableLineCount();
+	       nooflines.setIdofstatus(1);
+	       long finalline=no+backup;
+	       nooflines.setStatus(finalline);
+	       System.out.println("update");
+		   countDB.updateLine(nooflines.getStatus(),nooflines.getIdofstatus());
+	}
+}

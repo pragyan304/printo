@@ -1,0 +1,18 @@
+package com.printo.project.interfaces;
+
+
+public interface PrintLogServiceInterface {
+
+	
+	public List<PrintDetails> getAll();
+	public Collection<PrintDetails> getSeperated(PrintDetails ww);
+	//download report
+	public void downloadReport(PrintDetails pdata);
+	//delete log 
+	public void deleteLogData(int id);
+	public Collection<PrintDetails> getUniqueData(PrintDetails p);
+	
+	
+	
+	
+}

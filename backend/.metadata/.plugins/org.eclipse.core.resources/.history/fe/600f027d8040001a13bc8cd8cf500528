@@ -1,0 +1,258 @@
+package com.printo.project;
+
+
+import java.text.SimpleDateFormat;
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.printo.project.entities.Admin;
+import com.printo.project.entities.Client;
+import com.printo.project.entities.PrintDetails;
+import com.printo.project.services.AdminService;
+import com.printo.project.services.ClientService;
+import com.printo.project.services.PrintLogService;
+
+
+
+@CrossOrigin(origins = "http://localhost:4200")
+@RestController
+public class Entry {
+	public Entry() {
+		System.out.println("this is me");
+	}
+	
+	
+	@Autowired
+	private ReadData data;
+	@Autowired
+	private ClientService clientService;
+	@Autowired
+	private AdminService adminService;
+	@Autowired
+	private PrintLogService printLogService;
+	
+	
+				// test tomcate server
+				@RequestMapping("/") 
+				public String getMessage()
+				{	
+					
+					return "Shahswat";
+				}			
+				// get all print logs
+				@RequestMapping("/all") 
+				public Collection<PrintDetails> getAllPrintLog()
+				{	
+					try {
+						System.out.println("read data");
+						System.out.println("welcome");
+						data.read();
+						Collection<PrintDetails> x;
+						try {
+							x=printLogService.getAll();
+						} catch (Exception e) {
+							x=null;
+						}
+						System.out.println(x);
+						return x;
+					} catch (Exception e) {
+						System.out.println("error comes in rest api");
+						return null;
+					}
+				}
+				// refresh database
+				@RequestMapping("/refresh") 
+				public void getRefresh()
+				{	
+					System.out.println("read data");
+					data.read();		
+				}
+	
+	
+	
+				// get all data of print_details table
+				@PostMapping("/ggt") 
+				public Collection<PrintDetails> getNew( @RequestBody PrintDetails ww)
+				{	
+//					System.out.println(ww.getDate());
+//					System.out.println(ww.getDate1());
+					
+					Collection<PrintDetails> x=null;
+					try {
+						x=printLogService.getSeperated(ww);
+					} catch (Exception e) {
+						x=null;
+					}
+					System.out.println(x);
+					return x;
+				}
+	
+				// Admin verification
+				@RequestMapping("/abc")
+				public Admin validateAdmin(@RequestBody Admin uu){
+					Admin admin =adminService.validateAdmin(uu);
+					System.out.println("shashwat");
+					return admin;
+				}
+	
+				//client verification
+				@RequestMapping("/xyz")
+				public Client validateClient(@RequestBody Client uu){
+					Client client =clientService.validateClient(uu);
+					return client;
+				}
+	
+	
+				// download report
+				@RequestMapping("/download")
+				public String download(@RequestBody PrintDetails pdata){	
+					System.out.println("download");
+					printLogService.downloadReport(pdata);
+					return null;
+					}
+	
+	
+				// add client 
+				@RequestMapping("/addclient")
+				public int addNewClient(@RequestBody Client data){	
+					System.out.println(data);
+					//System.out.println("download");
+					int status=0;
+					try {
+						status=clientService.addnewClientToDB(data);
+					} catch (Exception e) {
+						status=0;
+					}
+					return status;
+					}
+	
+				// delete client 
+				@RequestMapping("/deleteclient")
+				public int deleteClient(@RequestBody Client data){	
+					System.out.println(data.getId());
+					System.out.println("download");
+					int status=0;
+					try {
+						status=clientService.deletenewClientToDB(data);
+					} catch (Exception e) {
+						status=0;
+					}
+					return status;
+					}
+	
+				// add admin 
+				@RequestMapping("/addadmin")
+				public int addNewAdmin(@RequestBody Admin data){	
+					System.out.println(data.getId());
+					System.out.println("download");
+					int status=0;
+					try {
+						status=adminService.addnewAdminToDB(data);
+					} catch (Exception e) {
+						status=0;
+					}
+					return status;
+					}
+				
+				// delete admin on admin request
+				@RequestMapping("/deleteadmin")
+				public int deleteAdmin(@RequestBody Admin data){	
+					System.out.println(data.getId());
+					System.out.println("download");
+					int status=0;
+					try {
+						status=adminService.deleteAdminToDB(data);
+					} catch (Exception e) {
+						status=0;
+					}
+					return status;
+					}
+				// return client table on admin request
+				@RequestMapping("/getallclientdata")
+				public List<Client> getAllClient(){
+					System.out.println("hiiiii");
+					List<Client> data =clientService.getAllDataClient();
+					System.out.println(data);
+					return data;
+					}
+				
+				// return admin table on admin request
+				@RequestMapping("/getalladmindata")
+				public List<Admin> getAllAdmin(){
+					System.out.println("hiiiii");
+					List<Admin> data =adminService.getAllDataAdmin();
+					System.out.println(data);
+					return data;
+					}
+				
+				// this part of our application will only execute once when
+				// we start our application on a specific system 
+				@RequestMapping("/check")
+				public long getNoOfAdmin(){
+					System.out.println("hiiiii");
+					long data =adminService.getCountOfAdmin();
+					System.out.println(data);
+					return data;
+					}
+				
+				// delete log data from admin
+				@RequestMapping("/deleteEntry")
+				public void deleteLog(@RequestBody int id){
+					printLogService.deleteLogData(id);
+					}
+				
+				// validate client while login
+				@RequestMapping("/getclientdata")
+				public Client validClient(@RequestBody String id){
+					return clientService.getClientValid(id);
+					}
+				
+				
+				
+				// get client print data for client portal
+				@RequestMapping("/getniqueclientdata")
+				public Collection<PrintDetails> getUniqueClientPrintData(@RequestBody String id){
+					System.out.println("id "+id);
+					PrintDetails p=new PrintDetails();
+					p.setUsername(id);
+					Collection<PrintDetails> data=printLogService.getUniqueData(p);
+					System.out.println(data);
+					if(data.isEmpty()==true) {
+						data=null;
+					}
+					return data;
+					}
+				
+				// Authorize admin for home page after admin login
+				@RequestMapping("/getAdmindata")
+				public Admin validAdmin(@RequestBody String id){
+					Admin ad=new Admin();
+					ad.setId(id);
+					Admin admin=adminService.Authorize(ad);
+					return admin;
+					}		
+				
+				// getClientTodayData
+				@RequestMapping("/getClientTodayData")
+				public Collection<PrintDetails> getClientTodayData(@RequestBody String id){
+					System.out.println("  "+id);
+					Collection<PrintDetails> data=printLogService.getClientTodayDataService(id);
+					return data;
+					}	
+				
+				
+				// getClientDateRangeData
+				@RequestMapping("/getClientDateRangeData")
+				public Collection<PrintDetails> getClientDateRangeData(@RequestBody PrintDetails details){
+					
+					Collection<PrintDetails> data=printLogService.getClientDateRangeDataService(details);
+					return data;
+					}	
+}
+

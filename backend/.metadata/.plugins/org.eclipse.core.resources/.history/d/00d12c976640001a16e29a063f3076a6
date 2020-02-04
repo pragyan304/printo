@@ -1,0 +1,7 @@
+package com.printo.project.jwt;
+
+public interface UserDetailsService {
+
+	UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
+
+}

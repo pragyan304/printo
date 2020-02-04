@@ -1,0 +1,133 @@
+package com.printo.project;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.printo.project.database.PrintLogDB;
+import com.printo.project.database.TableLineCountDB;
+import com.printo.project.entities.PrintDetails;
+import com.printo.project.entities.TableLineCount;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
+import java.util.Iterator;
+import java.util.Optional;
+import java.util.Date;  
+@Service
+public class Demo{
+	 @Autowired
+	private PrintLogDB printLogDB1;
+	 
+	 @Autowired
+	 private TableLineCountDB countDB;
+	 
+	 long backup;
+	 long no;
+	 
+	@SuppressWarnings("deprecation")
+	public  void read()  {
+		backup=0;
+		no=0;
+		System.out.println("in my");
+			
+		try {
+
+			
+			  JSONParser parser = new JSONParser();
+			  FileReader fr=new FileReader("xyz");
+			  BufferedReader br=new BufferedReader(fr);
+			  
+			  	String str=null;
+		       	long count=countDB.count();
+		       	System.out.println("no of columns"+count);
+		       	if(count==0) {
+		       		countDB.insertLine(1, 0);
+		       	}
+		       Optional<TableLineCount> y=countDB.findById(1);
+		       
+		       	System.out.println("data "+y.get().getStatus());
+		       	backup=y.get().getStatus();
+		       	long page=y.get().getStatus();
+		       	System.out.println("point 1");
+		       	while(page!=0) {
+		       		System.out.println("before "+br.readLine());
+		       	//	System.out.println("times "+page);
+		       		--page;
+		       	}
+			  
+			  
+			  
+			  
+			  while((str=br.readLine())!=null) {
+				  System.out.println("after "+str);
+				++no;
+				  JSONObject jsonObject = (JSONObject) parser.parse(str);
+		          String printername = (String) jsonObject.get("printername");
+		          String user = (String) jsonObject.get("user");
+		          String jobids = (String) jsonObject.get("jobid");
+		          int jobid=Integer.parseInt(jobids);
+		          String datetime = (String) jsonObject.get("datetime");
+		          
+		          
+		          String abc=datetime.replace("[","");
+		          String[] data=abc.split(" ");
+		          String temp=data[0];
+		          String[] data1=temp.split(":");
+		          temp=data1[0];
+		          
+		          SimpleDateFormat formatter2=new SimpleDateFormat("dd/MMM/yyyy");  
+		          Date date2=formatter2.parse(temp);
+				  java.sql.Date sqlDate=new java.sql.Date(date2.getTime());
+
+		          
+		          
+		          String pagecounts = (String) jsonObject.get("pagecount");
+		          int pagecount=Integer.parseInt(pagecounts);
+		          String filename = (String) jsonObject.get("filename");
+		          System.out.println(printername);
+		          System.out.println(user);
+		          System.out.println(jobid);
+		          System.out.println(temp);
+		          System.out.println(pagecount);
+		          System.out.println(filename);
+		          System.out.println("************");
+		          
+		          PrintDetails p=new PrintDetails();
+		          p.setJobid(jobid);
+		          p.setJobname(filename);
+		          p.setPrintername(printername);
+		          p.setSheet(pagecount);
+		          p.setUsername(user);
+		          p.setDate(sqlDate);
+		          
+		          	setLogLine();
+		          printLogDB1.logURI(p.getJobid(), p.getPrintername(), p.getUsername(), p.getJobname(), p.getSheet(),p.getDate());
+		          
+		          System.out.println("last");
+		          
+		}
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+		private void setLogLine(){
+		   TableLineCount nooflines=new TableLineCount();
+	       nooflines.setIdofstatus(1);
+	       long finalline=no+backup;
+	       nooflines.setStatus(finalline);
+	       System.out.println("update");
+		   countDB.updateLine(nooflines.getStatus(),nooflines.getIdofstatus());
+	}
+}

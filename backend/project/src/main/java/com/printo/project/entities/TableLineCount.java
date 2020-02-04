@@ -1,0 +1,38 @@
+package com.printo.project.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity(name="tablelinecount")
+@Table(name="tablelinecount")
+public class TableLineCount {
+	@Id
+	@Column(nullable = false)
+	private int idofstatus;
+	@Column(nullable = false)
+	private long status;
+	 public TableLineCount() { }
+	public int getIdofstatus() {
+		return idofstatus;
+	}
+	public void setIdofstatus(int idofstatus) {
+		this.idofstatus = idofstatus;
+	}
+	public long getStatus() {
+		return status;
+	}
+	public void setStatus(long no) {
+		this.status = no;
+	}
+	public TableLineCount(int idofstatus, long status) {
+		this.idofstatus = idofstatus;
+		this.status = status;
+	}
+	@Override
+	public String toString() {
+	return this.idofstatus+" "+this.status;
+	}
+	 
+}

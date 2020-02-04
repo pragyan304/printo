@@ -1,0 +1,104 @@
+package com.printo.project.services;
+
+import java.io.FileNotFoundException;
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.printo.project.database.PrintLogDB;
+import com.printo.project.entities.PrintDetails;
+import net.sf.jasperreports.engine.JRException;
+
+@Service
+public class PrintLogService {
+	
+	@Autowired
+	private ReportService reportService;
+	@Autowired
+	private PrintLogDB printLogDB;
+	
+		// get all records
+		public List<PrintDetails> getAll() {
+		List<PrintDetails> printDetails=(List<PrintDetails>) printLogDB.findAll();
+		return printDetails;
+		}
+		// get all record on paremeter
+		public Collection<PrintDetails> getSeperated(PrintDetails ww) {
+		System.out.println("hello");
+		Collection<PrintDetails> ll=null;
+		
+		if(ww.getUsername().equals("all")&&ww.getPrintername().equals("all")&&ww.getDate()!=null&&ww.getDate1()!=null) {
+			ll=printLogDB.allRecordWithSpecifyDate(ww.getDate(),ww.getDate1());
+			System.out.println("allRecordWithSpecifyDate");
+		}
+		else if(!ww.getUsername().equals("all")&&ww.getPrintername().equals("all")&&ww.getDate()!=null&&ww.getDate1()!=null) {
+			ll=printLogDB.specifycUserRecordWithSpecifyDate(ww.getUsername(),ww.getDate(),ww.getDate1());
+			System.out.println("specifycUserRecordWithSpecifyDate");
+		}
+		else if(ww.getUsername().equals("all")&&!ww.getPrintername().equals("all")&&ww.getDate()!=null&&ww.getDate1()!=null) {
+			ll=printLogDB.specifycPrinterRecordWithSpecifyDate(ww.getDate(),ww.getDate1());
+			System.out.println("specifycPrinterRecordWithSpecifyDate");
+		}
+		else if(!ww.getUsername().equals("all")&&!ww.getPrintername().equals("all")&&ww.getDate()!=null&&ww.getDate1()!=null) {
+			ll=printLogDB.specifycPrinterRecordWithSpecifyDate(ww.getUsername(),ww.getPrintername(),ww.getDate(),ww.getDate1());
+			System.out.println("specifycPrinterRecordWithSpecifyDate");
+		}
+		else if(ww.getUsername().equals("all")&&ww.getPrintername().equals("all")) {  //one
+				System.out.println("one");
+				ll=(Collection<PrintDetails>) printLogDB.findAll();
+		}
+		else if(!ww.getUsername().equals("all")&&ww.getPrintername().equals("all")) {  //two
+				System.out.println("two");
+				ll=printLogDB.two(ww.getUsername());
+		}
+		else if(ww.getUsername().equals("all")&&!ww.getPrintername().equals("all")) {	//three
+				
+				System.out.println("three");
+				ll=printLogDB.three(ww.getPrintername());
+		}
+		else if(!ww.getUsername().equals("all")&&!ww.getPrintername().equals("all")) {	//four
+				System.out.println("four");
+				ll=printLogDB.four(ww.getUsername(),ww.getPrintername());
+		}
+		else {
+			ll=null;
+			System.out.println("it is null");
+		}
+	
+		return ll;
+	}
+	
+	//download report
+	public void downloadReport(PrintDetails pdata) {
+		Collection<PrintDetails> cdata=getSeperated(pdata);
+		try {
+			reportService.exportReport(cdata,pdata);
+		} catch (FileNotFoundException | JRException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public Collection<PrintDetails> getUniqueData(PrintDetails p) {
+		System.out.println("********"+p.getUsername());
+		Collection<PrintDetails> data=printLogDB.two(p.getUsername());
+		return data;
+	}
+	public Collection<PrintDetails> getClientTodayDataService(String id) { 
+		   java.sql.Date sqlDate = new java.sql.Date(new Date().getTime());
+		   System.err.println("  "+sqlDate);
+		   PrintDetails details=new PrintDetails();
+		   details.setDate(sqlDate);
+		   details.setUsername(id);
+		   Collection<PrintDetails> data=printLogDB.getClientTodayDataDB(details.getUsername(),details.getDate());
+		   System.err.println(data);
+		   return data;
+	}
+	public Collection<PrintDetails> getClientDateRangeDataService(PrintDetails details) {
+		Collection<PrintDetails> data=printLogDB.specifycUserRecordWithSpecifyDate(details.getUsername(),details.getDate(),details.getDate1());
+		   System.err.println(data);
+		   return data;
+	}
+}

@@ -1,0 +1,8 @@
+<div *ngIf="loginService.isUserLoggedIn()||loginServiceClient.isClientLoggedIn()"class="header doNotPrint">
+  <a  routerLink="home" class="logo">PrintO</a>
+  <div class="header-right">
+    <a *ngIf="loginService.isUserLoggedIn()" class="header" routerLink="home">Home</a>
+    <a *ngIf="loginService.isUserLoggedIn()" class="header" routerLink="admin">Admin Service</a>
+     <a *ngIf="loginService.isUserLoggedIn()||loginServiceClient.isClientLoggedIn()" class="header" routerLink="logout">Logout</a>
+     </div>
+</div>

@@ -1,0 +1,75 @@
+<div id="main"> 
+
+  <div align="center" class="doNotPrint">
+
+   
+    <p id="a00">{{errorStatus}}</p>
+    
+    <p id="a00">{{msg1}}</p>
+    
+    <input class="input1" list="hosting-plan" placeholder="Cleint PC Name"  type="text" id="txtusername" [(ngModel)]="prints.username">
+   
+
+    <br>
+   <br>
+    <input class="input1" list="hosting-plan" placeholder="Printer Name" type="text" id="txtprintername" [(ngModel)]="prints.printername"><br>
+  <br>
+    To:
+    <input class="input1"    type="date" [(ngModel)]="prints.date">
+    From: <input class="input1"s type="date" [(ngModel)]="prints.date1">
+    <br>
+    <br>
+    <!-- <input type="date" [(ngModel)]="prints.date">
+    <input type="time" [(ngModel)]="prints.time"> -->
+    <button class="button1 pure-button" (click)="validate()">Show Report</button>
+    <button class="button1 pure-button" (click)="makeReset()">Reset</button> 
+    <button class="button1 pure-button" (click)="generateReport()">Download Report</button>
+    <button class="button1 pure-button" (click)="getPrint()">Print</button> 
+    <button class="button1 pure-button" (click)="resetDataBase()">Reset Database</button> 
+    
+
+
+   
+
+
+    <datalist id="hosting-plan">
+    <option value="all">All</option>
+  </datalist>
+  </div>
+
+  
+  <p id="a01" align="center">{{msg}}</p>
+    <p id="a01" align="center">{{status}}</p>
+  <div align="center" *ngIf="value" class="table-title">
+   <p  style="color: blue; font-size: xx-large; font-weight:700 ;">PRINT REPORT</p>
+ 
+    <p id="para1">{{noofprints}}</p>
+    <p id="count">{{count}}</p>
+    
+  <table class="table-fill">
+    <tr>
+        <th>PRINTER NAME</th>
+        <th>USER NAME</th>
+        <th>ITEMS</th>
+        <th>SHEETS</th>
+        <th>Date</th>
+    </tr>
+
+    <tr *ngFor="let print of dataprint">
+        <td >{{print.printername}}</td>
+        <td>{{print.username}}</td>
+        <td>{{print.jobname}}</td>
+        <td>{{print.sheet}}</td>
+        <td>{{print.date | date: 'dd/MM/yyyy'}}</td>
+       
+      
+
+    </tr>
+  </table>
+  <br>
+  </div>  
+  <br><br><br><br><br><br><br><br>
+
+
+
+

@@ -1,0 +1,40 @@
+
+
+
+
+<div class="contact1">
+    <div class="container-contact1">
+
+  <div id="main">
+
+    <form class="contact1-form validate-form">
+      <span class="contact1-form-title">
+        Client
+      </span>
+
+      <div class="wrap-input1 validate-input" data-validate = "Name is required">
+        <input class="input1" type="text" name="name" placeholder="Username" [(ngModel)]="client.id">
+        <br>    <p id="error1"> {{erroru}}</p> 
+      </div>
+
+      <div class="wrap-input1 validate-input" data-validate = "Subject is required">
+        <input class="input1" type="Password" name="subject" placeholder="Password" [(ngModel)]="client.password">
+        <br>  <p id="error1"> {{errorp}}</p> 
+      </div>
+<p id="error1"> {{status}}</p>
+
+      <div class="container-contact1-form-btn">
+        <button class="contact1-form-btn" (click)=checkLogin()>Submit</button>
+        <button class="contact1-form-btn" type="reset">Reset</button>
+        </div><br>
+        <div class="container-contact1-form-btn">
+          <button (click)="goBack()" class="contact1-form-btn">Back</button>
+       
+         
+
+      </div>
+    </form>
+  </div>
+    </div>
+  </div>
+  

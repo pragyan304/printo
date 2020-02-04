@@ -1,0 +1,95 @@
+<div id="maindiv">
+<div>
+  <br>
+  <div align="center" class="leftdiv">
+    <p id="a001" style="font-size: x-large;"> Add a Client </p>
+   <input class="input1" id="tbl" type="text" placeholder="Name" [(ngModel)]="clientd.name"><br>
+   <input class="input1" id="tbl" type="text" placeholder="Client PC Name" [(ngModel)]="clientd.clientpcname"><br>
+   <input class="input1" id="tbl" type="text" placeholder="Client ID"  [(ngModel)]="clientd.id"><br>
+   <input class="input1" id="tbl" type="password" placeholder="password" [(ngModel)]="clientd.password"><br>
+   <input class="input1" id="tbl" type="password" placeholder="Confirm password"  [(ngModel)]="clientd.repassword"><br>
+   <button class="button1 pure-button" id="btn1" (click)="addClient()"> Add Client </button>
+   <button class="button1 pure-button" style="margin-left: 100px;" (click)="getAllClient()">Show Clients</button>
+</div>
+  <div align="center" class="rightdiv">
+      <p id="a001" style="font-size: x-large;"> Add a Admin </p>
+    <input class="input1" id="tbl" type="text" placeholder="Name"  [(ngModel)]="admind.name"><br>
+    <input class="input1" id="tbl" type="text" placeholder="Admin ID"  [(ngModel)]="admind.id"><br>
+    <input class="input1" id="tbl" type="password" placeholder="password"  [(ngModel)]="admind.password"><br>
+    <input class="input1" id="tbl" type="password" placeholder="Confirm password"  [(ngModel)]="admind.repassword"><br>
+
+      <button class="button1 pure-button" id="btn1" (click)="addAdmin()"> Add Admin </button>
+      <button class="button1 pure-button" style="margin-left: 100px;" (click)="getAllAdmin()">Show Admins</button>
+ 
+  </div>
+   <br><br>
+  
+  <div>
+   <br>
+ 
+   </div>
+</div>
+<p style="color: rgb(2, 2, 2);  font-weight: 800 ;margin-left: 240px;">{{title}}</p>
+  <p style="color: rgb(0, 0, 0);  margin-top: -50px;  margin-left: 880px;font-weight: 800">{{titleA}}</p>
+ <br>
+ <br>
+ <br>
+    <div align="center" *ngIf="valueclient" class="table-title" id="tbl2">
+     
+      <br><br>
+    <table  border="2" align="center" class="table-fill">
+
+     <thead>
+      <tr >
+          <th>User Name</th>
+          <th>Name</th>
+          <th>Client PC Name</th>
+          <th>Password</th>
+          <th>ACTION</th>
+      </tr>
+     </thead>
+     <tbody>
+
+      <tr *ngFor="let temp of clientshow">
+          <td>{{temp.id}}</td>
+          <td>{{temp.name}}</td>
+          <td>{{temp.clientpcname}}</td>
+          <td>{{temp.password}}</td>
+          <td><button id="btndelclient" class="button1 pure-button"  (click)="deleteClient(temp.id)">Delete</button></td>
+      </tr>
+     </tbody>
+    </table>
+    </div>
+    <!-- Admin show -->
+    <div align="center" *ngIf="valueadmin" class="table-title"  id="tbl2">
+    
+     <br><br>
+    <table border="2" align="center" class="table-fill">
+
+     <thead>
+      <tr>
+          <th>User Name</th>
+          <th>Name</th>
+          <th>Password</th>
+          <th>ACTION</th>
+      </tr>
+     </thead>
+     <tbody>
+
+      <tr *ngFor="let temp of adminshow">
+          <td>{{temp.id}}</td>
+          <td>{{temp.name}}</td>
+          <td>{{temp.password}}</td>
+          <td><button id="btndelAdmin" class="button1 pure-button"  (click)="deleteAdmin(temp.id)">Delete</button></td>
+      </tr>
+     </tbody>
+    </table>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>

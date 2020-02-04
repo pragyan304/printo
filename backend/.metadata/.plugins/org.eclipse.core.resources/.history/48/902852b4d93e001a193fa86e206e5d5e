@@ -1,0 +1,76 @@
+package com.printo.project;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.Iterator;
+
+public class Demo{
+	public static void main(String[] args) throws Exception {
+		
+//		JSONParser jsonParser = new JSONParser();
+//		FileReader fr=new FileReader("xyz2.json");
+//		System.out.println("succ");
+//		  JSONObject jsonObject = (JSONObject) jsonParser.parse(fr);
+	        // String id = (String) jsonObject.get("printername");
+		//System.out.println("shahswat "+id);
+		  JSONParser parser = new JSONParser();
+		  //Reader reader = new FileReader("xyz2.json");
+		  
+		  
+		  FileReader fr=new FileReader("xyz");
+		  BufferedReader br=new BufferedReader(fr);
+		  String ss=null;
+		  while((ss=br.readLine())!=null) {
+			  JSONObject jsonObject = (JSONObject) parser.parse(ss);
+	          String printername = (String) jsonObject.get("printername");
+	          String user = (String) jsonObject.get("user");
+	          String jobids = (String) jsonObject.get("jobid");
+	          int jobid=Integer.parseInt(jobids);
+	          String datetime = (String) jsonObject.get("datetime");
+	          
+	          
+	          
+	          String[] data=datetime.split("[");
+	          
+	          System.out.println(data[1]);
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          
+	          String pagecounts = (String) jsonObject.get("pagecount");
+	          int pagecount=Integer.parseInt(pagecounts);
+	          String filename = (String) jsonObject.get("filename");
+	          System.out.println(printername);
+	          System.out.println(user);
+	          System.out.println(jobid);
+	          //System.out.println(datetime);
+	          System.out.println(pagecount);
+	          System.out.println(filename);
+	          System.out.println("************");
+		  }		  
+	}	
+}

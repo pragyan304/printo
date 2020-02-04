@@ -1,0 +1,13 @@
+package com.printo.project.interfaces;
+
+import java.util.List;
+
+import com.printo.project.entities.Admin;
+
+public interface ClientServiceInterface {
+	public List<Admin> getAllDataAdmin();
+	public int deleteAdminToDB(Admin data);
+	public int addnewAdminToDB(Admin data);
+	public Admin validateAdmin(Admin uu);
+	public long getCountOfAdmin();
+}

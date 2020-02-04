@@ -1,0 +1,5 @@
+package com.printo.project.jwt;
+
+public interface UserDetailsService {
+
+}

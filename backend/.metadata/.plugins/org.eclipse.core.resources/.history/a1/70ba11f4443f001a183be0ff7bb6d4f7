@@ -1,0 +1,29 @@
+/*
+
+
+	String str=null;
+       	long count=countDB.count();
+       	System.out.println("no of columns"+count);
+       	if(count==0) {
+       		countDB.insertLine(1, 0);
+       	}
+       Optional<TableLineCount> y=countDB.findById(1);
+       
+       	System.out.println("data "+y.get().getStatus());
+       	backup=y.get().getStatus();
+       	long page=y.get().getStatus();
+       	while(page!=0) {
+       		br.readLine();
+       	//	System.out.println("times "+page);
+       		--page;
+       	}
+            while((str=br.readLine())!=null){
+            	++no;
+//            	System.out.println("*******************************");
+//            	System.out.println("me20 "+x);
+                split(str);
+                return;
+
+
+
+*/

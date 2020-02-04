@@ -1,0 +1,109 @@
+package com.printo.project;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.printo.project.database.PrintLogDB;
+import com.printo.project.database.TableLineCountDB;
+import com.printo.project.entities.PrintDetails;
+import com.printo.project.entities.TableLineCount;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.text.SimpleDateFormat;
+import java.util.Optional;
+import java.util.Date;  
+@Service
+public class ResetDataBase{
+	 @Autowired
+	private PrintLogDB printLogDB1;
+	 
+	 @Autowired
+	 private TableLineCountDB countDB;
+	 
+	 long backup;
+	 long no;
+	 
+	@SuppressWarnings("deprecation")
+	public  void read()  {
+		backup=0;
+		no=0;
+		try {
+			countDB.truncateMyTable();
+			printLogDB1.truncateMyTable();
+			  JSONParser parser = new JSONParser();
+			  FileReader fr=new FileReader("/var/log/cups/page_log");
+			  BufferedReader br=new BufferedReader(fr);
+			  String str=null;
+		       	long count=countDB.count();
+		       	if(count==0) {
+		       		countDB.insertLine(1, 0);
+		       	}
+		       Optional<TableLineCount> y=countDB.findById(1);
+		       	backup=y.get().getStatus();
+		       	long page=y.get().getStatus();
+		       	while(page!=0) {
+		       		br.readLine();
+		       		--page;
+		       	}
+			  
+			  
+			  
+			  
+			  while((str=br.readLine())!=null) {
+				  ++no;
+				  
+				  JSONObject jsonObject = (JSONObject) parser.parse(str);
+				  
+				  
+		          String printername = (String) jsonObject.get("printername");
+		          String user = (String) jsonObject.get("user");
+		          String jobids = (String) jsonObject.get("jobid");
+		          int jobid=Integer.parseInt(jobids);
+		          String datetime = (String) jsonObject.get("datetime");
+		          
+		          
+		          String abc=datetime.replace("[","");
+		          String[] data=abc.split(" ");
+		          String temp=data[0];
+		          String[] data1=temp.split(":");
+		          temp=data1[0];
+		          
+		          SimpleDateFormat formatter2=new SimpleDateFormat("dd/MMM/yyyy");  
+		          Date date2=formatter2.parse(temp);
+				  java.sql.Date sqlDate=new java.sql.Date(date2.getTime());
+
+		          
+		          
+		          String pagecounts = (String) jsonObject.get("pagecount");
+		          
+		          int pagecount=Integer.parseInt(pagecounts);
+		          
+		          String filename = (String) jsonObject.get("filename");
+		          PrintDetails p=new PrintDetails();
+		          p.setJobid(jobid);
+		          p.setJobname(filename);
+		          p.setPrintername(printername);
+		          p.setSheet(pagecount);
+		          p.setUsername(user);
+		          p.setDate(sqlDate);
+		          
+		          
+		          printLogDB1.logURI(p.getJobid(), p.getPrintername(), p.getUsername(), p.getJobname(), p.getSheet(),p.getDate());       
+		}
+				setLogLine();
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+		private void setLogLine(){
+		   TableLineCount nooflines=new TableLineCount();
+	       nooflines.setIdofstatus(1);
+	       long finalline=no+backup;
+	       nooflines.setStatus(finalline);
+		   countDB.updateLine(nooflines.getStatus(),nooflines.getIdofstatus());
+	}
+}

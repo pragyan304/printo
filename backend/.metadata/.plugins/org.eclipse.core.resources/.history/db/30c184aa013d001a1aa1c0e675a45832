@@ -1,0 +1,27 @@
+package com.printo.project.interfaces;
+
+import java.io.FileNotFoundException;
+import java.util.Collection;
+import java.util.List;
+
+import com.printo.project.entities.Admin;
+import com.printo.project.entities.Client;
+import com.printo.project.entities.PrintDetails;
+
+import net.sf.jasperreports.engine.JRException;
+
+public interface PrintLogServiceInterface {
+
+	
+	public List<PrintDetails> getAll();
+	public Collection<PrintDetails> getSeperated(PrintDetails ww);
+	//download report
+	public void downloadReport(PrintDetails pdata);
+	//delete log 
+	public void deleteLogData(int id);
+	public Collection<PrintDetails> getUniqueData(PrintDetails p);
+	
+	
+	
+	
+}
